@@ -1,0 +1,20 @@
+@import 'node_modules/@fortawesome/fontawesome-free/css/all.min.css';
+@import 'node_modules/@fontsource/vidaloka/400.css';
+@import 'node_modules/@fontsource/catamaran/300.css';
+@import 'node_modules/@fontsource/catamaran/400.css';
+@import 'node_modules/@fontsource/catamaran/500.css';
+@import 'node_modules/@fontsource/catamaran/600.css';
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: "Vidaloka", serif;
+}
+
+p, span{
+  font-family: "Catamaran", sans-serif;
+}
