@@ -5,9 +5,11 @@ export default {
 </script>
 
 <template>
-  
+  <div class="dc-bg-jumbo-slider">
+    
+  </div>
 </template>
 
-<style>
+<style lang="scss" scoped>
 
 </style>

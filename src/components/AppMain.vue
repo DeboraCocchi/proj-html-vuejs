@@ -1,13 +1,14 @@
 <script>
 export default {
-  name:'AppMain'
+  name:'AppMain',
+  
 }
 </script>
 
 <template>
-  
+
 </template>
 
-<style>
-
+<style lang="scss" scoped>
+  
 </style>
