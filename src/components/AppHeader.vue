@@ -10,14 +10,15 @@ export default {
       <div class="container-fluid">
       <div class="row">
         <div class="col-4">
-          <span>Download App<span>iOS</span></span>
-          <span>Advertise with us</span></div>
+          <a href="#">Download App<span class="dc-ios">iOS</span></a>
+          <a href="#">Advertise with us</a>
+        </div>
         <div class="col-4 logo text-center"><img src="/avada-food-logo.png" alt="food-logo"></div>
-        <div class="col-4">
-          <i class="fa-brands fa-facebook-f"></i>
-          <i class="fa-brands fa-instagram"></i>
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-brands fa-youtube"></i>
+        <div class="col-4 social">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
         </div>
       </div>
     </div>
@@ -42,14 +43,39 @@ header{
   height:250px;
   background-color: white;
   color:$primary-darkgrey;
-  li{
-    padding:20px 0;
-    border:3px solid $primary-orange;
+  .col-4:first-of-type{
+    font-size:80%;
+    & *{
+      color:$primary-lightgrey;}
+    .dc-ios{
+    background-color: $primary-orange;
+    border-radius:3px;
+    color:white;
+    font-size:90%;
+    padding:2px 6px;
+    margin-right:1.3rem;
+    margin-left:.5rem;
   }
-  a{
-    text-decoration: none;
+  }
+  ul{
+    margin:2rem 0;
+  }
+  li{
+    padding:12px 0;
+    border:3px solid $primary-orange;
+     a{
     color:$primary-darkgrey;
     font-size:16px;
+  }
+  }
+ 
+  .col-4.social{
+    text-align:right;
+    a{
+      margin-left:30px;
+      color:$primary-lightgrey;
+
+    }
   }
 }
 </style>

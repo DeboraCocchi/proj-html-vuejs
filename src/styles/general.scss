@@ -25,13 +25,20 @@ ul{
   padding:0;
 }
 
+a{
+  text-decoration: none;
+  &:hover{
+    cursor:pointer;
+  }
+}
+
 .dc-big-cont{
   margin:0 auto;
   padding:40px;
-  width:85%;
+  width:66%;
 }
 
 .dc-small-cont{
   margin:0 auto;
-  width:50%;
+  width:42%;
 }
