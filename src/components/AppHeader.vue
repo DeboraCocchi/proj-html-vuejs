@@ -40,7 +40,7 @@ export default {
 <style lang="scss" scoped>
   @use '../styles/partials/variables.scss' as *;
 header{
-  height:250px;
+  height:280px;
   background-color: white;
   color:$primary-darkgrey;
   .col-4:first-of-type{
