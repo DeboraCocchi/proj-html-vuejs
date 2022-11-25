@@ -1,19 +1,47 @@
 <script>
+import {store} from '../data/store'
 export default {
-  name:'AppJumbotron'
+  name:'AppJumbotron',
+  data(){
+    return{
+      store
+    }
+  }
 }
 </script>
 
 <template>
   <div class="dc-bg-jumbo-slider container-fluid mt-5">
     <div class="first-art article">
+      <img :src="'../assets/recs-arts/'+store.articles[0].image+'.jpg'" :alt="store.articles[0].title">
       <div class="jumbo-article-preview dc-small-cont">
         <span>TODAY'S PICK</span>
-        <h2>Food Corner: Top Japanese Restaurants for Sushi</h2>
-        <h5>March 25, 2019</h5>
+        <h2>{{store.articles[0].title}}</h2>
+        <p>By{{store.articles[0].author}}| {{store.articles[0].date}}</p>
       </div>
     </div>
-  
+  </div>
+  <div class="dc-big-cont foodie-journal">
+    <div class="container-fluid">
+      
+      <h3>FOODIE JOURNAL</h3>
+      
+      <div class="row">
+      <div class="col-4 dc-article-thumb">
+
+      </div>
+      <div class="col-4 dc-article-thumb">
+
+      </div>
+      <div class="col-4 dc-article-thumb">
+
+      </div>
+    </div>
+
+    </div>
+    <div class="row">
+      <div class="col-4"></div>
+    </div>
   </div>
 </template>
 
@@ -61,4 +89,18 @@ export default {
     }
   }
   }
+  .dc-big-cont.foodie-journal{
+    // background-color: white;
+    height:20vh;
+    h3{
+      font-family: "Catamaran", Arial, Helvetica, sans-serif;
+      &::before{
+        content:'';
+        width:40%;
+        border:2px solid grey;
+        display:inline-block;
+      }
+    }
+  }
+
 </style>
