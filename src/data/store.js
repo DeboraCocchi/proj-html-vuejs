@@ -32,7 +32,7 @@ export const store = reactive ({
       content:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt perspiciatis facilis tenetur, eum error molestias quibusdam eius eos distinctio accusantium. Sit, eligendi? Dolorem, corrupti totam? Labore vel corrupti earum id?'
     },
     {
-      title:'Exloring Street Food in Bangkok',
+      title:'Exploring Street Food in Bangkok',
       date:'October 10th, 2022',
       author:'admin',
       image:'street-food.jpg',
@@ -86,7 +86,7 @@ export const store = reactive ({
     {
       title:'Summer Drinks: 10 Simple Recipes for a Taste of Freshness',
       categories: 'Drinks, Featured, Healthy, Simple, Freshness, Latest Recipes, Staff Picks',
-      image:'summer-drinks.jpg',
+      image:'summer-drink.jpg',
       content:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam sed, eveniet tenetur optio harum fuga reprehenderit quam incidunt iusto voluptate architecto amet doloremque atque eligendi labore similique distinctio voluptates.',
       id:4
     },
