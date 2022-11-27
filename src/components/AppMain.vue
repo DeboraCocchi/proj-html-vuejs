@@ -16,7 +16,7 @@ export default {
 <section class="pop-recipes">
   <div class="custom-cont text-center">
     <h4>POPULAR RECIPES</h4>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur officiis ducimus quis amet laudantium natus.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur officiis ducimus quis amet laudantium natus.</p>
   </div>
   <div class="dc-big-cont p-0">
     <div class="container-fluid p-0">
@@ -33,9 +33,15 @@ export default {
         </div>
         <!-- raccolta miniature (colonna dx) -->
         <div class="col-6 right dc-recs-miniatures d-flex flex-wrap">
-          <div class="thumb-recipe" v-for="(recipe, index) in store.recipes" :key="index">
+          <div class="thumb-recipe clickable" v-for="(recipe, index) in store.recipes" :key="index">
             <img :src="store.articlesImgPath+recipe.image" :alt="recipe.title">
+          
+            <div class="cover-on-hover">
+              <span><i class="fa-solid fa-link"></i></span>
+              <h5>{{recipe.title}}</h5>
+            </div>
           </div>
+          
         </div>
       </div>
     </div>
@@ -47,9 +53,8 @@ export default {
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur officiis ducimus quis amet laudantium natus.</p>
   </div>
   <div class="dc-big-cont p-0 icons d-flex flex-wrap justify-content-between mb-4">
-    <div class="dc-icon d-flex flex-column align-items-center" v-for="(icon, index) in store.icons" :key="index">
-      <!-- <img :src="'../assets/graphics/'+icon.path" :alt="icon.name"> -->
-      <img src="../assets/graphics/drinks-recipes.png" :alt="icon.name">
+    <div class="dc-icon clickable d-flex flex-column align-items-center" v-for="(icon, index) in store.icons" :key="index">
+      <img :src="'/graphics/'+icon.path" :alt="icon.name">
       <span>{{icon.name}}</span>
     </div>
   </div>
@@ -120,11 +125,25 @@ export default {
       .thumb-recipe{
         width:50%;
         height:calc(100% / 4);
-        padding:0.5em 1em;
+        padding:0.5em 0.5em;
+        position:relative;
+        transition: all .3s ease-in-out;
+        &:hover div.cover-on-hover{
+          opacity:1;
+          transition-delay: 0.1s;
+        }
         &>img{
           height:100%;
           width:100%;
           object-fit:cover;
+        }
+        .cover-on-hover{
+          height:calc(100% - 1em);
+          width:calc(100% - 1em);
+          top:0.5em;
+          left:0.5em;
+          padding:1em;
+          font-size:80%;
         }
       }
       }
@@ -136,10 +155,10 @@ export default {
       font-weight:bold;
     }
     & .dc-icon{
-    background-color: white;
-    width:calc(100% / 4 - 30px);
-    padding:5px 15px 8px;
-    margin-bottom:15px;
+      background-color: white;
+      width:calc(100% / 4 - 30px);
+      padding:5px 15px 8px;
+      margin-bottom:15px;
       &>span{
       text-transform: uppercase;
       font-size:90%;

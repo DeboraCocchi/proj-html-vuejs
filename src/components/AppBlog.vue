@@ -36,7 +36,7 @@ export default {
                   <p>By {{store.articles[0].author}} | {{store.articles[0].date}}</p>
                   <p>{{store.articles[0].content}}</p>
                   <div class="links d-flex justify-content-between">
-                    <a href="#">learn more ></a>
+                    <a href="#" class="orangy">learn more ></a>
                     <span><i class="fa-regular fa-comments"></i> 0</span>
                   </div>
                   
@@ -46,7 +46,14 @@ export default {
                 <div class="container-fluid">
                   <div class="row p-0 justify-content-between">
                     <div class="thumb-art mb-4 text-center" v-for="(art, index) in store.articles.slice(1,7)" :key="index">
-                      <img :src="store.articlesImgPath+art.image" alt="art.title">
+                      <div class="thumb-head">
+                        <img :src="store.articlesImgPath+art.image" :alt="art.title">
+                         <div class="cover-on-hover">
+                          <span><i class="fa-solid fa-link"></i></span>
+                          <h5>{{art.title}}</h5>
+                        </div>
+                      </div>
+                      
                       <div class="art-body d-flex flex-column justify-content-center p-3">
                         <h4>{{art.title}}</h4>
                         <p>By {{art.author}} | {{art.date}}</p>
@@ -55,20 +62,20 @@ export default {
                   </div>
                 </div>
               </div>
-              <div class="read-more">
+              <div class="read-more orangy">
                 LOAD MORE POSTS
               </div>
         </div>
         <!-- colonna a dx miscellanea -->
         <aside class="col-4 d-flex flex-column justify-content-between miscellanea">
-            <div class="d-flex align-items-center justify-content-center ad-bg">
+            <div class="d-flex align-items-center justify-content-center ad-bg clickable">
               <img src="../assets/graphics/ad-bg.jpg" alt="ad-bg">
               <span class="text-center">VIEW OUR<br> LATEST <br>RECIPES</span>
             </div>
             <div class="singapore">
               <img src="../assets/recs-arts/singapore.jpg" alt="singapore">
               <span class="black">City guide: Singapore</span>
-              <span class="orange"><i class="fa-solid fa-earth-asia"></i> VIEW ALL CITY GUIDES</span>
+              <span class="orange clickable"><i class="fa-solid fa-earth-asia"></i> VIEW ALL CITY GUIDES</span>
             </div>
             <div class="search d-flex mt-2">
               <span class="mag-glass"><i class="fa-solid fa-magnifying-glass"></i></span>
@@ -76,21 +83,21 @@ export default {
             </div>
             <div class="follow-us mb-3">
               <h5>Follow Us</h5>
-              <div class="socials d-flex">
+              <div class="socials d-flex mt-3">
                 <span class="social-media">
-                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="#" class="orangy"><i class="fa-brands fa-facebook-f"></i></a>
                 </span>
                 <span class="social-media">
-                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="#" class="orangy"><i class="fa-brands fa-instagram"></i></a>
                 </span>
                 <span class="social-media">
-                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="#" class="orangy"><i class="fa-brands fa-twitter"></i></a>
                 </span>
                 <span class="social-media">
-                  <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                  <a href="#" class="orangy"><i class="fa-brands fa-youtube"></i></a>
                 </span>
                 <span class="social-media">
-                  <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                  <a href="#" class="orangy"><i class="fa-brands fa-pinterest"></i></a>
                 </span>
               </div>
             </div>
@@ -99,7 +106,7 @@ export default {
                 <div class="popular">Popular</div>
                 <div class="recent">Recent</div>
               </div>
-              <div class="circle-mini-articles d-flex align-items-center mb-3 mt-3 pe-1"   v-for="(art, index) in store.articles.slice(0,3)" :key="index">
+              <div class="circle-mini-articles d-flex align-items-center mb-3 mt-3 pe-1 clickable"   v-for="(art, index) in store.articles.slice(0,3)" :key="index">
                 <div class="circle">
                   <img :src="store.articlesImgPath+art.image" :alt="art.title">
                   </div>
@@ -144,7 +151,7 @@ export default {
 <style lang="scss" scoped>
 
   @use '../styles/partials/variables.scss' as *;
-
+  
   .dc-big-cont{
     margin:50px auto;
     padding:0;
@@ -182,8 +189,9 @@ export default {
           &::after{
           content:'';
           width:100%;
+          font-weight:300;
           margin:1rem auto;
-          border:1px solid $primary-lightlightgrey;
+          border:1px solid rgba(227, 225, 225, 0.72);
           display:block;
         }}
       &>p:last-of-type{
@@ -211,11 +219,19 @@ export default {
       }
     }
     & .thumb-art{
-        background-color: white;
+      background-color: white;
         padding:0;
         width:48%;
+        & .thumb-head{
+          position:relative;
+          &:hover div.cover-on-hover{
+          opacity:1;
+          transition-delay: 0.1s;
+        }
+        }
       & p{
         color:$primary-lightgrey;
+        
       }
       }
     

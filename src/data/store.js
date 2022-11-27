@@ -18,18 +18,18 @@ export const store = reactive ({
       content:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro rerum dicta accusamus? Magni expedita obcaecati alias temporibus. Ab libero vel odio pariatur neque, officia sunt optio nobis tempora quidem omnis?'
     },
     {
-      title:'Meal Prep: Korean Bibimbap with Kimchi',
-      date:'November 3rd, 2022',
-      author:'admin',
-      image:'korean.jpg',
-      content:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam sed, eveniet tenetur optio harum fuga reprehenderit quam incidunt iusto voluptate architecto amet doloremque atque eligendi labore similique distinctio voluptates.'
-    },
-    {
       title:'Why These Toasts with Tea are My New Favourite',
       date:'October 22nd, 2022',
       author:'admin',
       image:'fi-toasts.jpg',
       content:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt perspiciatis facilis tenetur, eum error molestias quibusdam eius eos distinctio accusantium. Sit, eligendi? Dolorem, corrupti totam? Labore vel corrupti earum id?'
+    },
+    {
+      title:'Meal Prep: Korean Bibimbap with Kimchi',
+      date:'November 3rd, 2022',
+      author:'admin',
+      image:'korean.jpg',
+      content:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam sed, eveniet tenetur optio harum fuga reprehenderit quam incidunt iusto voluptate architecto amet doloremque atque eligendi labore similique distinctio voluptates.'
     },
     {
       title:'Exploring Street Food in Bangkok',
@@ -91,14 +91,14 @@ export const store = reactive ({
       id:4
     },
     {
-      title:'Supernutrients in Vegetables: the Perfect Balance between Taste and Health',
+      title:'Supernutrients in Vegetables',
       categories: 'Lunch, Summer, Healthy, Light, Latest Recipes, Staff Picks',
       image:'nutrition.jpeg',
       content:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam sed, eveniet tenetur optio harum fuga reprehenderit quam incidunt iusto voluptate architecto amet doloremque atque eligendi labore similique distinctio voluptates.',
       id:5
     },
     {
-      title:'The Perfect Cosmopolitan: Carrie Bradshow who?',
+      title:'The Ultimate Recipe for a Perfect Cosmopolitan',
       categories: 'Drink, Summer, Alcoholic Recipes, Latest Recipes, Staff Picks',
       image:'cosmopolitan.jpg',
       content:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam sed, eveniet tenetur optio harum fuga reprehenderit quam incidunt iusto voluptate architecto amet doloremque atque eligendi labore similique distinctio voluptates.',

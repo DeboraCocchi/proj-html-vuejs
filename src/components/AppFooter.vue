@@ -11,8 +11,8 @@ export default {
 <template>
   <section class="cta d-flex align-items-center justify-content-center flex-column">
     <h2 class="mb-4">Subscribe <span>&amp;</span> Receive A Free Book</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus nam officiis temporibus adipisci?</p>
-    <div w-100>
+    <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus nam officiis temporibus adipisci?</p>
+    <div class="mb-5">
       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email...">
       <button type="submit">SUBMIT</button>
     </div>
@@ -28,22 +28,22 @@ export default {
           <div class="col-3 logo-socials d-flex flex-column justify-content-between">
             <img src="/avada-food-logo-mob-2x.png" alt="avada-food-logo">
             <div class="social">
-              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#"><i class="fa-brands fa-twitter"></i></a>
-              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+              <a href="#" class="orangy" ><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="orangy" ><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="orangy"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#" class="orangy" ><i class="fa-brands fa-youtube"></i></a>
             </div>
           </div>
           <div class="col-3 pages">
             <ul class="h-100">
-              <li><a href="#">Recipes</a></li>
-              <li><a href="#">Places</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contacts</a></li>
+              <li><a class="orangy" href="#">Recipes</a></li>
+              <li><a class="orangy" href="#">Places</a></li>
+              <li><a class="orangy" href="#">Blog</a></li>
+              <li><a class="orangy" href="#">About</a></li>
+              <li><a class="orangy" href="#">Contacts</a></li>
             </ul>
           </div>
-          <div class="col contacts">
+          <div class="col-3 contacts">
             <h6>CONTACT</h6>
             <ul>
               <li>775 New York Ave, Brooklyn, Kings, New York 11203</li>
@@ -119,8 +119,10 @@ export default {
       color:$primary-orange;
       font-weight:400;
     }
-    .row>*{
+    .row>.col-3{
       padding:1.5rem;
+    }
+    .row>.col-3:not(.get-app){
       border-right:1px dotted $primary-lightlightgrey;
     }
     .logo-socials{
