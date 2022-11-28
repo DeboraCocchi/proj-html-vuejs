@@ -11,7 +11,7 @@ export default {
     AppJumbotron,
     AppMain,
     AppBlog,
-    AppFooter
+    AppFooter,
   }
 }
 </script>

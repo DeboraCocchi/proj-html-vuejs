@@ -1,29 +1,49 @@
 <script>
-import {store} from '../data/store'
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper";
+import {store} from '../data/store.js'
 export default {
   name:'AppJumbotron',
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
   data(){
     return{
       store
+    }
+  },
+  setup() {
+    return {
+      modules: [Navigation],
     }
   }
 }
 </script>
 
 <template>
+  <!-- swiper -->
   <div class="dc-bg-jumbo-slider container-fluid p-0">
     <div class="first-art article">
-      <!-- <img :src="'../assets/recs-arts/'+store.articles[0].author+'.jpg'" :alt="store.articles[0].title"> -->
-      <img src="../assets/recs-arts/japanese.jpg" :alt="store.articles[0].title">
-      <div class="jumbo-article-preview dc-small-cont">
-        <span>TODAY'S PICK</span>
-        <h2>{{store.articles[0].title}}</h2>
-        <p class="jumbo-author">By {{store.articles[0].author}} | {{store.articles[0].date}}</p>
-      </div>
+
+      <swiper :navigation="true" :modules="modules" class="mySwiper">
+        <swiper-slide v-for="(art, ind) in store.articles" :key="ind">
+          <img :src="store.articlesImgPath+art.image" alt="">
+          <div class="jumbo-article-preview dc-small-cont">
+            <span>TODAY'S PICK</span>
+            <h2>{{store.articles[ind].title}}</h2>
+            <p class="jumbo-author">By {{store.articles[ind].author}} | {{store.articles[ind].date}}</p>
+          </div>
+        </swiper-slide>
+    </swiper> 
+
     </div>
   </div>
 
-  <div class="dc-big-cont foodie-journal px-0 pt-4">
+  <!-- section-foodie-journal: top 3 articles -->
+  <div class="dc-big-cont foodie-journal px-0 py-4">
     <div class="container-fluid text-center">
       <h3 class="pt-2 pb-3">FOODIE JOURNAL</h3>
       <div class="row">
@@ -45,13 +65,19 @@ export default {
       </div>
     </div>
   </div>
-
-  
 </template>
 
 <style lang="scss" scoped>
 
 @use '../styles/partials/variables.scss' as *;
+  
+  
+  
+  .swiper.swiper-initialized.swiper-horizontal[data-v-6f625875]{
+    height:75vh;
+  }
+
+
   .dc-bg-jumbo-slider{
     .article{
     height:76vh;
@@ -71,6 +97,7 @@ export default {
       text-align:center;
       position:relative;
       top:-70%;
+      z-index:11;
       h2{
         font-size:2.3rem;
         font-weight:400;
@@ -104,6 +131,7 @@ export default {
     background-color: white;
     position:relative;
     top:-50px;
+    z-index:12;
     h3{
       font-family: "Catamaran", Arial, Helvetica, sans-serif;
       font-weight:300;

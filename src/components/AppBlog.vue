@@ -21,7 +21,7 @@ export default {
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur officiis ducimus quis amet laudantium natus.</p>
         </div>
         <div class="col-3 offset-1">
-          <a href="#">read our blog <i class="fa-solid fa-book-open-reader"></i></a>
+          <a href="#" class="orange-btn">read our blog <i class="fa-solid fa-book-open-reader"></i></a>
         </div>
       </div>
 
@@ -75,7 +75,7 @@ export default {
             <div class="singapore">
               <img src="../assets/recs-arts/singapore.jpg" alt="singapore">
               <span class="black">City guide: Singapore</span>
-              <span class="orange clickable"><i class="fa-solid fa-earth-asia"></i> VIEW ALL CITY GUIDES</span>
+              <span class="orange clickable orange-btn"><i class="fa-solid fa-earth-asia"></i> VIEW ALL CITY GUIDES</span>
             </div>
             <div class="search d-flex mt-2">
               <span class="mag-glass"><i class="fa-solid fa-magnifying-glass"></i></span>
@@ -152,6 +152,8 @@ export default {
 
   @use '../styles/partials/variables.scss' as *;
   
+  
+
   .dc-big-cont{
     margin:50px auto;
     padding:0;
@@ -160,10 +162,16 @@ export default {
       h4{
         font-family: "Catamaran", Arial, Helvetica, sans-serif;
         font-weight:bold;
-      }}
+      }
+      
+    }
+      
     .col-3.offset-1{
       text-align:end;
       padding:0;
+      & .orange-btn:hover{
+        background-color: rgba($primary-orange, .75);
+        color:$primary-darkgrey;}
       a{
         text-transform:uppercase;
         background-color: $primary-orange;
@@ -268,6 +276,9 @@ export default {
       background-color: $primary-orange;
       width:100%;
       left:0;
+        &:hover{
+        background-color: rgba($primary-orange, .75);
+        color:$primary-darkgrey;}
       &::after{
         content:'';
         width:100%;

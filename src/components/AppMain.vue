@@ -8,6 +8,11 @@ export default {
       store,
       currentIndex:0
     }
+  },
+  methods:{
+    changeIndex(index){
+      this.currentIndex = store.recipes[index].id;
+    }
   }
 }
 </script>
@@ -16,24 +21,31 @@ export default {
 <section class="pop-recipes">
   <div class="custom-cont text-center">
     <h4>POPULAR RECIPES</h4>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur officiis ducimus quis amet laudantium natus.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur officiis ducimus quis amet laudantium natus.
+
+     
+    </p>
   </div>
   <div class="dc-big-cont p-0">
     <div class="container-fluid p-0">
-      <div class="row p-0">
+      <div class="row pop-recs-row p-0">
         <!-- main recipe in lettura (col sx) -->
         <div class="col-6 left">
-            <img :src="store.articlesImgPath+store.recipes[0].image" :alt="store.recipes[0].title">
+            <div class="dc-recipe-head">
+              <img :src="store.articlesImgPath+store.recipes[currentIndex].image" :alt="store.recipes[currentIndex].title">
+            </div>
+        
             <div class="dc-recipe-body">
-              <h3>{{store.recipes[0].title}}</h3>
-              <p>{{store.recipes[0].categories}}</p>
-              <p>{{store.recipes[0].content}}</p>
-              <a href="#">learn more</a>
+              <h3>{{store.recipes[currentIndex].title}}</h3>
+              <p>{{store.recipes[currentIndex].categories}}</p>
+              <p>{{store.recipes[currentIndex].content}}</p>
+              <a href="#" class="orange-btn">learn more</a>
             </div>
         </div>
         <!-- raccolta miniature (colonna dx) -->
         <div class="col-6 right dc-recs-miniatures d-flex flex-wrap">
-          <div class="thumb-recipe clickable" v-for="(recipe, index) in store.recipes" :key="index">
+          <div class="thumb-recipe clickable" v-for="(recipe, index) in store.recipes" :key="index"
+          @click="changeIndex(index)">
             <img :src="store.articlesImgPath+recipe.image" :alt="recipe.title">
           
             <div class="cover-on-hover">
@@ -41,7 +53,6 @@ export default {
               <h5>{{recipe.title}}</h5>
             </div>
           </div>
-          
         </div>
       </div>
     </div>
@@ -81,21 +92,31 @@ export default {
         margin:0.5em 0 0.5em;
         padding:0;
         height:100%;
-        &>img{
-          width:100%;
-          height:70%;
-          object-fit: cover;
-        }
+          .dc-recipe-head{
+            height:60%;
+            width:100%;
+            &>img{
+            width:100%;
+            height:100%;
+            object-fit: cover;
+          }
+          }
+        
         .dc-recipe-body{
           color:$primary-darkgrey;
           background-color: white;
           padding:2rem 1rem;
+          height:40%;
+          & > .orange-btn:hover{
+            background-color: rgba($primary-orange, .75);
+            color:$primary-darkgrey;
+          }
           
           &>h3{
             font-size:1.5em;
           }
           &>p:first-of-type{
-            line-height:1rem;
+            line-height:.8rem;
             font-weight:300;
             &::after{
             content:'';
@@ -105,8 +126,8 @@ export default {
             display:block;
             }}
           &>p:last-of-type{
-            font-size:1.1rem;
-            line-height:2rem;
+            font-size:1rem;
+            line-height:1.6rem;
             font-weight:300;
             margin-bottom:1.8rem;
           }
@@ -143,7 +164,7 @@ export default {
           top:0.5em;
           left:0.5em;
           padding:1em;
-          font-size:80%;
+          font-size:70%;
         }
       }
       }
@@ -159,6 +180,10 @@ export default {
       width:calc(100% / 4 - 30px);
       padding:5px 15px 8px;
       margin-bottom:15px;
+      transition: all .3s ease-in-out;
+      &:hover{
+        transform: scale(105%);
+      }
       &>span{
       text-transform: uppercase;
       font-size:90%;

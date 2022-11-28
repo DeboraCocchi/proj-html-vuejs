@@ -15,28 +15,28 @@ export const store = reactive ({
       date:'November 15th, 2022',
       author:'admin',
       image:'roundup.jpg',
-      content:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro rerum dicta accusamus? Magni expedita obcaecati alias temporibus. Ab libero vel odio pariatur neque, officia sunt optio nobis tempora quidem omnis?'
+      content:'Porro rerum dicta accusamus? Magni expedita obcaecati alias temporibus. Ab libero vel odio pariatur neque, officia sunt optio nobis tempora quidem omnis?'
     },
     {
       title:'Why These Toasts with Tea are My New Favourite',
       date:'October 22nd, 2022',
       author:'admin',
       image:'fi-toasts.jpg',
-      content:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt perspiciatis facilis tenetur, eum error molestias quibusdam eius eos distinctio accusantium. Sit, eligendi? Dolorem, corrupti totam? Labore vel corrupti earum id?'
+      content:'Nesciunt perspiciatis facilis tenetur, eum error molestias quibusdam eius eos distinctio accusantium. Sit, eligendi? Dolorem, corrupti totam? Labore vel corrupti earum id? Lorem ipsum dolor sit amet consectetur, adipisicing elit...'
     },
     {
       title:'Meal Prep: Korean Bibimbap with Kimchi',
       date:'November 3rd, 2022',
       author:'admin',
       image:'korean.jpg',
-      content:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam sed, eveniet tenetur optio harum fuga reprehenderit quam incidunt iusto voluptate architecto amet doloremque atque eligendi labore similique distinctio voluptates.'
+      content:'Magnam sed, eveniet tenetur optio harum fuga reprehenderit quam incidunt iusto voluptate architecto amet doloremque atque eligendi labore similique distinctio voluptates.Lorem ipsum dolor sit amet consectetur, adipisicing elit!'
     },
     {
       title:'Exploring Street Food in Bangkok',
       date:'October 10th, 2022',
       author:'admin',
       image:'street-food.jpg',
-      content:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam sed, eveniet tenetur optio harum fuga reprehenderit quam incidunt iusto voluptate architecto amet doloremque atque eligendi labore similique distinctio voluptates.'
+      content:'Similique aspernatur dolor neque cupiditate, earum maxime facere facilis sapiente quibusdam quaerat! Lorem ipsum dolor sit amet consectetur, adipisicing elit.'
     },
     {
       title:'Organic Choices for Healthier Living',
@@ -59,56 +59,56 @@ export const store = reactive ({
       title:'Lunch Favourite with Salad, Naan and Beans',
       categories: 'Bakery, Featured, Healthy, Latest Recipes, Staff Picks',
       image:'yogurt-naan.jpg',
-      content:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam sed, eveniet tenetur optio harum fuga reprehenderit quam incidunt iusto voluptate architecto amet doloremque atque eligendi labore similique distinctio voluptates.',
+      content:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam sed, eveniet tenetur optio harum fuga reprehenderit quam incidunt iusto voluptate architecto amet doloremque.',
       id:0
     },
     {
       title:'Healthy Breakfast Ideas: Fruit Porridge',
       categories: 'Bakery, Featured, Healthy, Latest Recipes, Staff Picks',
       image:'mixed-fruits.jpg',
-      content:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam sed, eveniet tenetur optio harum fuga reprehenderit quam incidunt iusto voluptate architecto amet doloremque atque eligendi labore similique distinctio voluptates.',
+      content:'Porro rerum dicta accusamus? Magni expedita obcaecati alias temporibus. Ab libero vel odio pariatur neque, officia sunt optio nobis tempora quidem omnis?Repellendus corrupti ex nulla voluptatem doloribus consequuntur molestiae tenetur aspernatur incidunt quidem,',
       id:1
     },
     {
-      title:'Tasty Breakfast: Fruity and Sweet',
-      categories: 'Bakery, Featured, Healthy, Latest Recipes, Staff Picks, Breakfast',
+      title:'Tasty Breakfast: Fruity, Sweet and Nutrient',
+      categories: 'Bakery, Healthy, Latest Recipes, Staff Picks, Breakfast',
       image:'sweet-breakfast.jpg',
-      content:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam sed, eveniet tenetur optio harum fuga reprehenderit quam incidunt iusto voluptate architecto amet doloremque atque eligendi labore similique distinctio voluptates.',
+      content:'Repellendus corrupti ex nulla voluptatem doloribus consequuntur molestiae tenetur aspernatur incidunt quidem, dignissimos cum vitae dolor temporibus esse? Ut dolore soluta asperiores.',
       id:2
     },
     {
       title:'Making the Original Italian Gelato: Fresh and Simple',
       categories: 'Sweets, Healthy, Latest Recipes, Staff Picks',
       image:'gelato.jpg',
-      content:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam sed, eveniet tenetur optio harum fuga reprehenderit quam incidunt iusto voluptate architecto amet doloremque atque eligendi labore similique distinctio voluptates.',
+      content:'Odio perferendis explicabo ab illum. Provident similique possimus, harum ex incidunt explicabo dolor perferendis fuga odit temporibus beatae quas exercitationem maiores eligendi.',
       id:3
     },
     {
       title:'Summer Drinks: 10 Simple Recipes for a Taste of Freshness',
-      categories: 'Drinks, Featured, Healthy, Simple, Freshness, Latest Recipes, Staff Picks',
+      categories: 'Drinks, Healthy, Simple, Latest Recipes, Staff Picks',
       image:'summer-drink.jpg',
-      content:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam sed, eveniet tenetur optio harum fuga reprehenderit quam incidunt iusto voluptate architecto amet doloremque atque eligendi labore similique distinctio voluptates.',
+      content:'Dignissimos qui officiis consequuntur tempora cupiditate maxime delectus eveniet in provident porro! Lorem ipsum dolor sit amet consectetur adipisicing elit doloremque atque eligendi.',
       id:4
     },
     {
-      title:'Supernutrients in Vegetables',
+      title:'All Supernutrients in Vegetables: The Ultimate Guide',
       categories: 'Lunch, Summer, Healthy, Light, Latest Recipes, Staff Picks',
       image:'nutrition.jpeg',
-      content:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam sed, eveniet tenetur optio harum fuga reprehenderit quam incidunt iusto voluptate architecto amet doloremque atque eligendi labore similique distinctio voluptates.',
+      content:'Temporibus numquam harum neque ab reprehenderit repellendus non aut velit laboriosam! Optio harum fuga reprehenderit quam incidunt iusto voluptate architecto. Magni expedita obcaecati alias temporibus.',
       id:5
     },
     {
       title:'The Ultimate Recipe for a Perfect Cosmopolitan',
-      categories: 'Drink, Summer, Alcoholic Recipes, Latest Recipes, Staff Picks',
+      categories: 'Drink, Summer, Alcoholic Recipes, Staff Picks',
       image:'cosmopolitan.jpg',
-      content:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam sed, eveniet tenetur optio harum fuga reprehenderit quam incidunt iusto voluptate architecto amet doloremque atque eligendi labore similique distinctio voluptates.',
+      content:'Laboriosam, amet qui iste aperiam sed nobis quos consectetur voluptas veniam saepe harum fuga reprehenderit quam incidunt iusto voluptate architecto amet doloremque.',
       id:6
     },
     {
       title:'The Magic Power of Fruits: All About Strawberries',
-      categories: 'Breakfast, Fruits, Healthy, Light, Latest Recipes, Staff Picks',
+      categories: 'Breakfast, Healthy, Latest Recipes, Staff Picks',
       image:'fruits.jpg',
-      content:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam sed, eveniet tenetur optio harum fuga reprehenderit quam incidunt iusto voluptate architecto amet doloremque atque eligendi labore similique distinctio voluptates.',
+      content:'Dolore dignissimos labore ipsam eius suscipit pariatur, tempore voluptates. Praesentium, pariatur sequi.Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni expedita obcaecati alias temporibus.',
       id:7
     }
     

@@ -9,7 +9,7 @@ export default {
     <div class="dc-big-cont py-3">
       <div class="container-fluid">
       <div class="row">
-        <div class="col-4">
+        <div class="col-lg-4 col-sm-2 download">
           <a href="#">Download App<span class="dc-ios">iOS</span></a>
           <a href="#">Advertise with us</a>
         </div>
@@ -24,6 +24,17 @@ export default {
         </div>
       </div>
     </div>
+      <div class="nav-mobile">
+        <div class="mini-socials">
+          <a href="#" class="orangy"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="orangy"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="orangy"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" class="orangy"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <i class="fa-solid fa-bars"></i>
+
+
+      </div>
       <div class="dc-nav dc-small-cont d-flex justify-content-center">
         <ul class="d-flex justify-content-between">
          <li class="active"><a href="#">Home</a></li> 
@@ -32,7 +43,10 @@ export default {
           <li><a href="#">Blog</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
-          <li><span><i class="fa-solid fa-magnifying-glass"></i></span><input type="search" name="search-within-site" id="search-within-site" class="d-none"></li>
+          <li class="mag-link-head d-flex">
+            <span><i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+            <input type="search" name="search-within-site" id="search-within-site" class="mag-hidden" placeholder="Search..."></li>
         </ul>
       </div>
     </div>
@@ -97,15 +111,40 @@ export default {
       font-size:1.1rem;
       transition:all .3s ease-in-out;
       }
-    }
+      &.mag-link-head{
+        transition: all .3s ease-in-out;
+      }
+      &.mag-link-head>.mag-hidden{
+        opacity:0;
+        width:80px;
+        height:1.2rem;
+        border:none;
+        display:inline-block;
+        margin-left:20px;
+        &:focus-visible{
+          color: #39393a;
+          background-color: #fff;
+          border-color: #fc7523;
+          outline: 0;
+        }
+      }
+      &.mag-link-head:hover span{
+        color:$primary-orange;
+      }
+      &.mag-link-head:hover >.mag-hidden{
+        opacity:1;
+        transition-delay: 0.2s;
+      }
+      }
   
-    .col-4.social{
+    .social{
       text-align:right;
       a{
-        margin-left:30px;
+        margin-left:20px;
         color:$primary-lightgrey;
 
       }
     }
   }
+
 </style>

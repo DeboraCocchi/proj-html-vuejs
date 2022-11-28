@@ -14,7 +14,7 @@ export default {
     <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus nam officiis temporibus adipisci?</p>
     <div class="mb-5">
       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email...">
-      <button type="submit">SUBMIT</button>
+      <button type="submit" class="btn-orange">SUBMIT</button>
     </div>
   </section>
   <section class="photos">
@@ -98,6 +98,10 @@ export default {
           padding:8px 15px;
           font-size:90%;
           border:none;
+          transition:all .3s ease-in-out;
+        &:hover{
+        background-color: rgba($primary-orange, .75);
+        color:$primary-darkgrey;}
       }
     }
     
