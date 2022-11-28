@@ -46,7 +46,7 @@ export default {
   <div class="dc-big-cont foodie-journal px-0 py-4">
     <div class="container-fluid text-center">
       <h3 class="pt-2 pb-3">FOODIE JOURNAL</h3>
-      <div class="row">
+      <div class="row flex-wrap">
 
         <div class="col-4 dc-article-thumb"
         v-for="(art, index) in store.articles.slice(0,3)" :key="index">
@@ -141,7 +141,7 @@ export default {
       &::before, &::after{
         content:'';
         max-width: 100%;
-        min-width: 34%;
+        width:34%;
         border:1px solid rgba(227, 225, 225, 0.72);
         display:inline-block;
         margin-bottom:0.5rem;
@@ -155,6 +155,8 @@ export default {
     }
   }
   .dc-article-thumb{
+    min-width:245px;
+    margin:15px auto;
     .thumb-head{
       height:55%;
       position:relative;
