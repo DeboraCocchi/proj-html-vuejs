@@ -24,17 +24,6 @@ export default {
         </div>
       </div>
     </div>
-      <div class="nav-mobile">
-        <div class="mini-socials">
-          <a href="#" class="orangy"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#" class="orangy"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" class="orangy"><i class="fa-brands fa-twitter"></i></a>
-          <a href="#" class="orangy"><i class="fa-brands fa-youtube"></i></a>
-        </div>
-        <i class="fa-solid fa-bars"></i>
-
-
-      </div>
       <div class="dc-nav dc-small-cont d-flex justify-content-center">
         <ul class="d-flex justify-content-between">
          <li class="active"><a href="#">Home</a></li> 
@@ -59,7 +48,7 @@ export default {
     height:270px;
     background-color: white;
     color:$primary-darkgrey;
-    .col-4:first-of-type{
+    .col-lg-4:first-of-type{
       font-size:80%;
       & *{
         color:$primary-lightgrey;}
