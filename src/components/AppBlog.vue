@@ -15,7 +15,7 @@ export default {
   <div class="dc-big-cont">
     <div class="container-fluid p-0">
       <!-- farm to table -->
-      <div class="row justify-content-between">
+      <div class="row justify-content-between mb-4">
         <div class="col-8 p-3 custom-cont text-left">
           <h4>FARM TO TABLE</h4>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur officiis ducimus quis amet laudantium natus.</p>
@@ -291,7 +291,7 @@ export default {
       &>span.black{
       position:absolute;
       display:inline-block;
-      font-size: 120%;
+      font-size: 110%;
       font-weight: 500;
       padding: 8px;
       background-color: rgba(0,0,0,0.7);
@@ -340,6 +340,9 @@ export default {
         margin-right:1rem;
         & a[data-v-a518d8a7]{
           color:rgb(84,78,71);
+        }
+        &:hover{
+          background-color: rgba(255, 255, 255, 0.742);;
         }
       }
     }
