@@ -119,6 +119,7 @@ export default {
       }
       &.mag-link-head:hover span{
         color:$primary-orange;
+        cursor:pointer;
       }
       &.mag-link-head:hover >.mag-hidden{
         opacity:1;

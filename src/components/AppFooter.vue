@@ -40,7 +40,7 @@ export default {
               <li><a class="orangy" href="#">Places</a></li>
               <li><a class="orangy" href="#">Blog</a></li>
               <li><a class="orangy" href="#">About</a></li>
-              <li><a class="orangy" href="#">Contacts</a></li>
+              <li><a class="orangy" href="#">Contact</a></li>
             </ul>
           </div>
           <div class="col-3 contacts">
@@ -52,7 +52,7 @@ export default {
             </ul>
           </div>
           <div class="col-3 get-app d-flex flex-column">
-            <h6>GET OUR APP!</h6>
+            <h6>GET OUR APP !</h6>
             <img src="../assets/graphics/download-android.png" alt="dwnld-app">
             <img src="../assets/graphics/download-app-store.png" alt="dwnld-ios">
           </div>
