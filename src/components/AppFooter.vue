@@ -25,8 +25,8 @@ export default {
     <div class="dc-big-cont">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-3 logo-socials d-flex flex-column justify-content-between">
-            <img src="/avada-food-logo-mob-2x.png" alt="avada-food-logo">
+          <div class="col-md-3 col-12 col-sm-6 logo-socials d-flex flex-column justify-content-between">
+            <img src="/avada-food-logo-mob-2x.png" class="footer-logo" alt="avada-food-logo">
             <div class="social">
               <a href="#" class="orangy" ><i class="fa-brands fa-facebook-f"></i></a>
               <a href="#" class="orangy" ><i class="fa-brands fa-instagram"></i></a>
@@ -34,16 +34,16 @@ export default {
               <a href="#" class="orangy" ><i class="fa-brands fa-youtube"></i></a>
             </div>
           </div>
-          <div class="col-3 pages">
+          <div class="col-md-3 col-12 col-sm-6 pages">
             <ul class="h-100">
               <li><a class="orangy" href="#">Recipes</a></li>
               <li><a class="orangy" href="#">Places</a></li>
               <li><a class="orangy" href="#">Blog</a></li>
               <li><a class="orangy" href="#">About</a></li>
-              <li><a class="orangy" href="#">Contact</a></li>
+              <li><a class="orangy" href="#">Contacts</a></li>
             </ul>
           </div>
-          <div class="col-3 contacts">
+          <div class="col-md-3 col-12 col-sm-6 contacts">
             <h6>CONTACT</h6>
             <ul>
               <li>775 New York Ave, Brooklyn, Kings, New York 11203</li>
@@ -51,8 +51,8 @@ export default {
               <li>info@avada-food-corner.com</li>
             </ul>
           </div>
-          <div class="col-3 get-app d-flex flex-column">
-            <h6>GET OUR APP !</h6>
+          <div class="col-md-3 col-12 col-sm-6 get-app d-flex flex-column">
+            <h6>GET OUR APP!</h6>
             <img src="../assets/graphics/download-android.png" alt="dwnld-app">
             <img src="../assets/graphics/download-app-store.png" alt="dwnld-ios">
           </div>

@@ -15,20 +15,20 @@ export default {
   <div class="dc-big-cont">
     <div class="container-fluid p-0">
       <!-- farm to table -->
-      <div class="row justify-content-between mb-4">
-        <div class="col-8 p-3 custom-cont text-left">
+      <div class="row justify-content-between">
+        <div class="col-sm-8 col-12 p-3 custom-cont text-left">
           <h4>FARM TO TABLE</h4>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur officiis ducimus quis amet laudantium natus.</p>
         </div>
-        <div class="col-3 offset-1">
+        <div class="col-sm-3 offset-md-1 col-12 d-flex">
           <a href="#" class="orange-btn">read our blog <i class="fa-solid fa-book-open-reader"></i></a>
         </div>
       </div>
 
       
-       <div class="row p-0">
+       <div class="row p-0 articles-row">
          <!-- colonna a sx con articoli -->
-        <div class="col-8 articles">
+        <div class="col-12 col-md-8 articles">
               <div class="main-article">
                 <img :src="store.articlesImgPath+store.articles[0].image" :alt="store.articles[0].title">
                 <div class="dc-art-body">
@@ -45,7 +45,7 @@ export default {
               <div class="thumb-blog mt-4">
                 <div class="container-fluid">
                   <div class="row p-0 justify-content-between">
-                    <div class="thumb-art mb-4 text-center" v-for="(art, index) in store.articles.slice(1,7)" :key="index">
+                    <div class="thumb-art text-center" v-for="(art, index) in store.articles.slice(1,7)" :key="index">
                       <div class="thumb-head">
                         <img :src="store.articlesImgPath+art.image" :alt="art.title">
                          <div class="cover-on-hover">
@@ -54,7 +54,7 @@ export default {
                         </div>
                       </div>
                       
-                      <div class="art-body d-flex flex-column justify-content-center p-3">
+                      <div class="art-body d-flex flex-column justify-content-center">
                         <h4>{{art.title}}</h4>
                         <p>By {{art.author}} | {{art.date}}</p>
                       </div>
@@ -67,7 +67,8 @@ export default {
               </div>
         </div>
         <!-- colonna a dx miscellanea -->
-        <aside class="col-4 d-flex flex-column justify-content-between miscellanea">
+        <div class="container-fluid col-md-4">
+          <aside class="col-12 d-flex justify-content-between miscellanea row">
             <div class="d-flex align-items-center justify-content-center ad-bg clickable">
               <img src="../assets/graphics/ad-bg.jpg" alt="ad-bg">
               <span class="text-center">VIEW OUR<br> LATEST <br>RECIPES</span>
@@ -77,7 +78,7 @@ export default {
               <span class="black">City guide: Singapore</span>
               <span class="orange clickable orange-btn"><i class="fa-solid fa-earth-asia"></i> VIEW ALL CITY GUIDES</span>
             </div>
-            <div class="search d-flex mt-2">
+            <div class="search d-flex">
               <span class="mag-glass"><i class="fa-solid fa-magnifying-glass"></i></span>
               <input type="search" class="form-control" id="chearchThroughSite" placeholder="Search...">
             </div>
@@ -141,6 +142,8 @@ export default {
               </div>
             </div>
         </aside>
+        </div>
+        
       </div>
     </div> 
   </div>
@@ -166,7 +169,7 @@ export default {
       
     }
       
-    .col-3.offset-1{
+    .col-sm-3.offset-md-1{
       text-align:end;
       padding:0;
       & .orange-btn:hover{
@@ -181,6 +184,7 @@ export default {
         position:relative;
         top:10px;
         right:10px;
+        height: fit-content;
         }
     }
     & .main-article{
@@ -229,6 +233,7 @@ export default {
     & .thumb-art{
       background-color: white;
         padding:0;
+        margin-bottom:1.2rem;
         width:48%;
         & .thumb-head{
           position:relative;
@@ -237,15 +242,19 @@ export default {
           transition-delay: 0.1s;
         }
         }
-      & p{
+        .thumb-body{
+          padding:1rem 1.8rem;
+          & p{
         color:$primary-lightgrey;
-        
-      }
+        }
+        }
+      
       }
     
   }
 
   aside.miscellanea{
+    flex-direction:column;
     .ad-bg{
       position:relative;
       img{
@@ -291,19 +300,18 @@ export default {
       &>span.black{
       position:absolute;
       display:inline-block;
-      font-size: 110%;
       font-weight: 500;
       padding: 8px;
       background-color: rgba(0,0,0,0.7);
       color:white;
       width:70%;
       left:0;
-      bottom:2rem;
+      bottom:3rem;
       }
     }
     .search{
       color:$primary-lightgrey;
-      padding:4rem 0 2rem;
+      padding:3rem 0 2rem;
       & span{
         border-bottom-left-radius: 0.375rem;
         border-top-left-radius:  0.375rem;;
@@ -324,26 +332,28 @@ export default {
       }
     }
     .follow-us{
-      & > h5{
+      .socials{
+        justify-content: space-between;
+         & > h5{
         color:$primary-orange;
-      }
+        }
       & span{
         border-radius:0.375rem;
-        display:inline-block;
-        width: 2.5rem;
-        height: 2.5rem;
+        display:flex;
+        align-items:center;
+        justify-content: center;
+        width:18%;
+        aspect-ratio: 1 / 1;
         font-size:1.1rem;
-        text-align: center;
         border:1px solid rgba(84, 78, 71, 0.279);
         background-color:rgb(233,233,226);
         padding:0.5rem;
-        margin-right:1rem;
         & a[data-v-a518d8a7]{
           color:rgb(84,78,71);
+          display:flex;
+          align-items: center;
         }
-        &:hover{
-          background-color: rgba(255, 255, 255, 0.742);;
-        }
+      }
       }
     }
     .recent-posts{
@@ -432,5 +442,6 @@ export default {
       
     }
   }
+  
 
 </style>

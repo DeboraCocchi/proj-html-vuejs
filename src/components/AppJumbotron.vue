@@ -28,7 +28,7 @@ export default {
   <div class="dc-bg-jumbo-slider container-fluid p-0">
     <div class="first-art article">
 
-      <swiper :navigation="true" :modules="modules" class="mySwiper">
+      <swiper :navigation="true" :modules="modules" class="mySwiper d-none d-lg-block">
         <swiper-slide v-for="(art, ind) in store.articles" :key="ind">
           <img :src="store.articlesImgPath+art.image" alt="">
           <div class="jumbo-article-preview dc-small-cont">
@@ -37,7 +37,17 @@ export default {
             <p class="jumbo-author">By {{store.articles[ind].author}} | {{store.articles[ind].date}}</p>
           </div>
         </swiper-slide>
-    </swiper> 
+      </swiper>
+
+<!-- img in anteprima  -->
+      <div class="big-image-article d-lg-none">
+        <img src="/recs-arts/japanese.jpg" alt="japanese">
+        <div class="jumbo-article-preview dc-small-cont">
+            <span>TODAY'S PICK</span>
+            <h2>{{store.articles[0].title}}</h2>
+            <p class="jumbo-author">By {{store.articles[0].author}} | {{store.articles[0].date}}</p>
+          </div>
+      </div>
 
     </div>
   </div>
@@ -46,9 +56,9 @@ export default {
   <div class="dc-big-cont foodie-journal px-0 py-4">
     <div class="container-fluid text-center">
       <h3 class="pt-2 pb-3">FOODIE JOURNAL</h3>
-      <div class="row flex-wrap">
+      <div class="row">
 
-        <div class="col-4 dc-article-thumb"
+        <div class="col-md-4 col-sm-12 dc-article-thumb"
         v-for="(art, index) in store.articles.slice(0,3)" :key="index">
           <div class="thumb-head">
             <img :src="store.articlesImgPath+art.image" :alt="art.title">
@@ -57,7 +67,7 @@ export default {
               <h5>{{art.title}}</h5>
             </div>
           </div>
-          <div class="thumb-body d-flex flex-column justify-content-between">
+          <div class="thumb-body d-flex flex-column justify-content-start">
             <h4>{{art.title}}</h4>
             <p>By {{art.author}} | {{art.date}}</p>
           </div>
@@ -141,7 +151,7 @@ export default {
       &::before, &::after{
         content:'';
         max-width: 100%;
-        width:34%;
+        min-width: 30%;
         border:1px solid rgba(227, 225, 225, 0.72);
         display:inline-block;
         margin-bottom:0.5rem;
@@ -155,8 +165,7 @@ export default {
     }
   }
   .dc-article-thumb{
-    min-width:245px;
-    margin:15px auto;
+    padding-bottom: 1rem;
     .thumb-head{
       height:55%;
       position:relative;
@@ -173,8 +182,9 @@ export default {
     }
     .thumb-body{
       h4{
-      margin-top:1rem;
+      margin-top:1.5rem;
       font-size:1.4rem;
+      line-height: 1.4rem;
 
     }
     p{
@@ -186,6 +196,39 @@ export default {
     }
   }
 
+  .big-image-article.d-lg-none{
+    height:60vh;
+    img{
+      object-fit:cover;
+      width:100%;
+      height:100%;
+      object-position: center;
+    }
+  }
   
+  // media-queries
+  @media screen and (max-width:1204px){
+    .dc-small-cont{
+      font-size:80%;
+    }
+
+    .dc-bg-jumbo-slider .jumbo-article-preview h2[data-v-6f625875]{
+        font-size:2.1rem;
+      }
+
+
+  }
+
+  // @media screen and (max-width:671px){
+  //   .dc-bg-jumbo-slider{
+  //  .jumbo-article-preview[data-v-6f625875] {
+  //     padding:1rem 2rem;
+  //     h2[data-v-6f625875]{
+  //       font-size:1.7rem;
+  //     }
+
+  //  }
+  // }
+  // }
 
 </style>

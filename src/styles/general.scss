@@ -1,3 +1,4 @@
+@use './partials/mixins.scss' as *;
 @import 'node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 @import '/node_modules/bootstrap/scss/bootstrap';
 @import 'node_modules/@fontsource/vidaloka/400.css';
@@ -46,12 +47,12 @@ a{
 
 .dc-big-cont{
   margin:0 auto;
-  width:62%;
+  width:65%;
 }
 
 .dc-small-cont{
   margin:0 auto;
-  width:40%;
+  width:45%;
 }
 
 
@@ -66,5 +67,6 @@ a{
 div.swiper-button-next{
   right:20px !important;
 }
+
 
 

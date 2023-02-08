@@ -30,7 +30,7 @@ export default {
     <div class="container-fluid p-0">
       <div class="row pop-recs-row p-0">
         <!-- main recipe in lettura (col sx) -->
-        <div class="col-6 left">
+        <div class="col-md-6 col-sm-12 left">
             <div class="dc-recipe-head">
               <img :src="store.articlesImgPath+store.recipes[currentIndex].image" :alt="store.recipes[currentIndex].title">
             </div>
@@ -43,7 +43,7 @@ export default {
             </div>
         </div>
         <!-- raccolta miniature (colonna dx) -->
-        <div class="col-6 right dc-recs-miniatures d-flex flex-wrap">
+        <div class="col-md-6 col-sm-12 right dc-recs-miniatures d-flex flex-wrap">
           <div class="thumb-recipe clickable" v-for="(recipe, index) in store.recipes" :key="index"
           @click="changeIndex(index)">
             <img :src="store.articlesImgPath+recipe.image" :alt="recipe.title">
@@ -198,6 +198,10 @@ export default {
       font-weight:bold;
       }
     }
+  }
+
+  div.cover-on-hover[data-v-e56908e2]{
+    display:none;
   }
   
 </style>
